@@ -1,0 +1,30 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  general:
+    search: "Search"
+    login: Login
+    reset_password: Reset Password
+    password: Password
+    password_confirmation: Password confirmation
+    name: Name
+    change_password: Change Password
+    sign_up: Sign Up
+    user_dashboard: User Dashboard
+    admin_dashboard: Admin Dashboard
+    save: Save
+    forgot_password: Forgot Password
+    no_user_exists_for_provided_email_address: User not found
+    click_here_to_recover_your_account: Forgot Password ?
+    password_has_been_sent_to_your_email_address: Password has been reset and new password was sent to your e-mail.
+    password_successfully_updated: Password successfully updated
+    terms_and_conditions: "I accept <a href='#'>Terms Of Service</a>"
+    term_error: Please accept Temrs of Service to continue
+    login_successful: Successful Logged In
+    logout_successful: Successfully Logout
+    successfully_created: Successfully created.
+    successfully_updated: Successfully updated.
+    successfully_destroyed: Successfully destroyed.
+    successfully_registered: "Successfully registered"
+    user_active_successfully: "Activated successfully."

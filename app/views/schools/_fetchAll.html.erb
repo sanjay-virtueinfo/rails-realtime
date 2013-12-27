@@ -1,0 +1,25 @@
+<% @schools.each do |o_row| %>
+<div class="listing">
+	<div class="fl">
+		<h5><%= o_row.name %></h5>
+		<p><strong><%= t("general.email") %>:</strong> <%= o_row.email %></p>
+		<p><strong><%= t("general.owner") %>:</strong> <%= o_row.owner %></p>
+	</div>
+	<div class="fr">
+		<p><strong><%= t("general.phone") %>:</strong> <%= o_row.phone %></p>
+		<p><strong><%= t("general.mobile") %>:</strong> <%= o_row.mobile %></p>
+		<p>
+		      <%= link_to t('.edit', :default => t("helpers.links.edit")),
+		                  edit_school_path(o_row), :class => 'btn btn-mini' %>
+		      <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+		                  school_path(o_row),
+		                  :method => :delete,
+		                  :remote => true,
+		                  :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+		                  :class => 'btn btn-mini btn-danger' %>
+		
+		</p>
+	</div>
+</div>	
+
+<% end %>

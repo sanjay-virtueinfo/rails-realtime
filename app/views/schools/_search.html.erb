@@ -1,0 +1,13 @@
+<div class="fr">
+	<%= form_for @o_single, :url => {:action => "index"}, :method => "get", :remote => true, :html => { :class => 'form-horizontal' } do |f| %>
+					
+				<%#= hidden_field_tag "page", @page %>	
+		   <div class="control-group">
+	      <div class="controls">
+	        <%= f.text_field :name, :class => 'input-xlarge', :placeholder => 'Name' %>
+	        <%= f.submit t("general.search"), :class => 'btn btn-success' %>
+	      </div>
+	    </div>
+	    
+	<% end %>
+</div>

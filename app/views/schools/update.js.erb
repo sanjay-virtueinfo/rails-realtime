@@ -1,0 +1,4 @@
+$("#div_update_form").html("<%= escape_javascript(render("form")) %>");
+client.publish('/listing', {
+  text: 'schools'
+});

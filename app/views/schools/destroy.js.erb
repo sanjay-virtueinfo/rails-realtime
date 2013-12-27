@@ -1,0 +1,4 @@
+$("#div_update").html("<%= escape_javascript(render("fetchAll")) %>");
+client.publish('/listing', {
+  text: 'schools'
+});

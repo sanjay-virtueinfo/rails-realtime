@@ -1,0 +1,14 @@
+<% if params[:school] %>
+	$(".schools").html("<%= escape_javascript(render("fetchAll")).html_safe %>");
+<% else %>
+	<% unless params[:faye] == 'yes' %>
+		$(".schools").append("<%= escape_javascript(render("fetchAll")).html_safe %>");
+		$('a.load-more-schools').attr('href', "<%= schools_path page: @schools.next_page %>");
+	<% else %>
+		$(".schools").html("<%= escape_javascript(render("fetchAll")).html_safe %>");	
+	<% end %>
+<% end %>	
+ 
+<% unless @schools.next_page %>
+	$('a.load-more-schools').remove();
+<% end %>	
